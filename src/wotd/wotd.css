@@ -38,6 +38,7 @@ a {
 }
 
 small {
+  margin-top: 4px;
   font-size: 8px;
   font-style: italic;
   line-height: 10px;
