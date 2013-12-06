@@ -1,16 +1,8 @@
-//
-//  COLApiKey.h
-//  wotd
-//
-//  Created by Colin Milhench on 06/12/2013.
-//  Copyright (c) 2013 Colin Milhench. All rights reserved.
-//
-
-#ifndef wotd_COLApiKey_h
-#define wotd_COLApiKey_h
-
-
-// This is the ApiKey for worknik, create yours at http://developer.wordnik.com
-#define APIKEY @"0123456789abcdef0123456789abcdef0123456789abcdef"
-
-#endif
+RVdyBdxLLi8Jd42uWnxi/V35iZ53zVc9wDsN//bVJiAZXcFE7PQ/mxsMKEEXJVgF
+Z6cUDoRAF77Josni8oJxe0rlSGQcF7PMVjiEptTs/ApqGrneQxBK03TS8qgiQGGE
+Xecwg250aZi2LxqTAHElycwuW7qAXNXrT0MAQes4qp9zC+gRYecW71ry83gmxtCR
+h+uNUvC2W/5teOjoxEFOBAV4AjxQPJV74uQ5fV11kjkPHbELdNz4F7tnNGhbOTmX
+xmgbokQKjkGHOHu0XOFxOIn9NrRETqkvB3BDHwja+w3qFPb0HmyH5pgsWwTEjEHF
+jPdcCT4djRkYmmwDApHVzz126HQuhtN4Bd2Nu0TfagmFBs9mJ1eQJgCJrzzFzNK+
+edkJnJs8iDOGmLvYhh4IJs18rs0RT2fDhHsIzIuE97K87gXxAbMYnYNOrv2ybNxX
+RXBmwMsvplcNDq4S8CEBrA==
