@@ -4,7 +4,7 @@ wotd - Word of the Day
 This is a "Word of the day iOS Phone application" developed as a whim in designing something simple for the iPhone. 
 
 ##### **Configuration Note**
-In order to run this, you will need a valid ApiKey from [wordnik](1) configured in [/src/wotd/COLApiKey.h](2).  By default this file is encrypted.
+In order to run this, you will need a valid ApiKey from [wordnik][1] configured in [/src/wotd/COLApiKey.h][2].  By default this file is encrypted.
 
 ## License
     
