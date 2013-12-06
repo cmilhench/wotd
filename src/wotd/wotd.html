@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <script src="handlebars-v1.1.2.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="wotd.css" type="text/css" charset="utf-8">
+  </head>
+  <body>
+    <div id="content-placeholder">Loading...</div>
+    <script id="wordOfTheDay-template" type="text/x-handlebars-template">
+      <article>
+        {{#if data.word}}
+        <h1>
+          {{data.word}}
+          <small>{{date}}</small>
+        </h1>
+        {{/if}}
+        {{#if data.definitions}}
+        <ol>
+          {{#each data.definitions}}
+          <li>
+            {{text}} <small>{{partOfSpeech}} - source: {{source}}</small>
+          </li>
+          {{/each}}
+        </ol>
+        {{/if}}
+        {{#if data.examples}}
+        <h4>Example</h4>
+        <p>
+          {{data.examples.0.text}}
+          <small>
+          <a href="{{examples.1.url}}">
+            {{data.examples.0.title}}
+            <img src="link.png" height="7" xwidth="9">
+          </a>
+          </small>
+        </p>
+        {{/if}}
+        {{#if data.note}}
+        <h4>Note</h4>
+        <p>{{data.note}}</p>
+        {{/if}}
+        {{#if error}}
+        <h1>Error</h1>
+        <p>{{error.description}}</p>
+        <p>{{error.reason}}</p>
+        <p>{{error.suggestion}}</p>
+        {{/if}}
+      </article>
+      <footer>
+        <small style="float:left">
+          Created by
+          <a href="mailto:colin@milhen.ch" target="_blank">Colin Milhench</a>
+          {{year}}
+          (<a href="http://milhen.ch" target="_blank">http://milhen.ch</a>)
+        </small>
+        <a href="http://www.wordnik.com/words/{{word}}" target="_blank" style="float:right">
+          <img src="wordnik.png" height="9" width="66">
+        </a>
+      </footer>
+    </script>
+    
+    <script id="error-template" type="text/x-handlebars-template">
+      <h1>Error</h1>
+      <p>{{.}}</p>
+      <footer>
+          <small style="float:left">
+          Created by
+          <a href="mailto:colin@milhen.ch" target="_blank">Colin Milhench</a>
+            {{year}}
+          (<a href="http://milhen.ch" target="_blank">http://milhen.ch</a>)
+        </small>
+     </footer>
+    </script>
+
+    <script id="randomWords-template" type="text/x-handlebars-template">
+      <article>
+        {{#if .}}
+        <h4>Words</h4>
+        <ul>
+        {{#each .}}
+          <li>{{word}}</li>
+        {{/each}}
+        </ul>
+        {{/if}}
+      </article>
+      <footer>
+        <small style="float:left">
+          Created by
+          <a href="mailto:colin@milhen.ch" target="_blank">Colin Milhench</a>
+          {{year}}
+          (<a href="http://milhen.ch" target="_blank">http://milhen.ch</a>)
+        </small>
+        <a href="http://www.wordnik.com/words/{{word}}" target="_blank" style="float:right">
+          <img src="wordnik.png" height="9" width="66">
+        </a>
+      </footer>
+    </script>
+    
+    <script id="loading-template" type="text/x-handlebars-template">
+    Loading... 
+    </script>
+    
+    <script type="text/javascript" charset="utf-8">
+    
+      Handlebars.registerHelper('year', function(options) {
+        return new Date().getFullYear();
+      });
+    
+      function loading(data) {
+        var element  = document.querySelector("#content-placeholder");
+        var source   = document.querySelector("#loading-template").innerHTML;
+        var template = Handlebars.compile(source);
+        element.innerHTML = template(data || {});
+      }
+      
+      function wordOfTheDay (err, data) {
+        if (err) return error(err);
+        var element  = document.querySelector("#content-placeholder");
+        var source   = document.querySelector("#wordOfTheDay-template").innerHTML;
+        var template = Handlebars.compile(source);
+        element.innerHTML = template(data || {});
+        fix();
+      }
+      
+      function randomWords (err, data) {
+        if (err) return error(err);
+        var element  = document.querySelector("#content-placeholder");
+        var source   = document.querySelector("#randomWords-template").innerHTML;
+        var template = Handlebars.compile(source);
+        element.innerHTML = template(data || {});
+        fix();
+      }
+      
+      function error (data) {
+        var element  = document.querySelector("#content-placeholder");
+        var source   = document.querySelector("#error-template").innerHTML;
+        var template = Handlebars.compile(source);
+        element.innerHTML = template(data || {});
+        fix();
+      }
+      
+      function fix() {
+        var element = document.querySelector("footer");
+        var scroll = document.body.scrollHeight;
+        var height = document.body.clientHeight;
+        if (!element) return;
+        if (scroll > height) {
+          element.style.position = 'inherit';
+        } else {
+          element.style.position = 'absolute';
+        }
+      }
+      window.onresize = fix
+      
+      var data = {
+        "id": 494330,
+        "word": "cockal",
+        "examples": [{
+          "url": "http://api.wordnik.com/v4/mid/11aece8c8cb55f17463e895ad680e3a41931708ad941e9891b62d3fe6eb31687",
+          "text": "Now as cockal bones do not take up as much room when they fall upon one end as when they fall flat, so every one of us at the beginning sitting broadwise, and with a full face to the table, afterwards changes the figure, and turns his depth, not his breadth, to the board.",
+          "title": "Plutarch, Essays and Miscellanies",
+          "id": 1091643424
+        }, {
+          "url": "http://api.wordnik.com/v4/mid/5113a6e7f3fdbf565889d0b13250045ec9037007a6a6c89e5fb31a32868bd955",
+          "text": "The game of cockal, 'Bikkelen,' still played by Dutch village children on the blue doorsteps of old-fashioned houses, together with 'Kaatsen,' was introduced into Holland by Nero Claudius Druses, and it is stated that he laid out the first 'Kaatsbaan.'",
+          "title": "P.M. Hough, Dutch Life in Town and Country",
+          "id": 1163164344
+        }],
+        "definitions": [{
+          "text": "A game played with the anklebones of a sheep in the place of dice.",
+          "partOfSpeech": "noun",
+          "source": "century"
+        }, {
+          "text": "The bone used in playing the game; the astragalus or ankle-bone, incorrectly called hucklebone.",
+          "partOfSpeech": "noun",
+          "source": "century"
+        }],
+        "note": "According to the OED, 'cockal' may have originally been 'cock all,' although what 'cock all' means is unclear.",
+        "publishDate": "2013-12-04T03:00:00.000+0000",
+        "contentProvider": {
+          "name": "wordnik",
+          "id": 711
+        }
+      };
+      //loading();
+      //wordOfTheDay(data);
+    </script>
+  </body>
+</html>

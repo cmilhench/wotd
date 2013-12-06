@@ -1,0 +1,62 @@
+body {
+  font-family: 'palatino';
+  font-size: 12px;
+  line-height: 16px;
+  color: #3c3c3c;
+  margin: 8px 16px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  line-height: 1em;
+  margin: 1em 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-style: italic;
+  margin: 24px 0 24px 0;
+}
+
+h4 {
+  font-size: 7px;
+  text-transform: uppercase;
+}
+
+p, ol {
+  padding-left: 16px;
+  margin: 0 0 24px 0;
+}
+
+li {
+  margin: 0 0 24px 0;
+}
+
+a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+small {
+  font-size: 8px;
+  font-style: italic;
+  line-height: 10px;
+}
+
+article a, article small {
+  display: block;
+}
+
+footer {
+  display: block;
+  bottom: 8px;
+  left: 16px;
+  right: 16px;
+  height: 10px;
+}
+
+footer small {
+  font-size: 6px;
+  line-height:6px;
+  margin-top:2px;
+}
