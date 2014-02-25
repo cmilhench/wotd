@@ -28,15 +28,20 @@
 {
     [super viewDidLoad];
     
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"wotd" ofType:@"html" inDirectory:nil];
-    NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     
     [NSURLProtocol registerClass:[COLLocalJSURLProtocol class]];
+    
+    self.scrollView.delegate = self;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"wotd" ofType:@"html" inDirectory:nil];
+    NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     
     int after = (VIEWS - FOCUS);
     int befor = (VIEWS - after - 1);
     
-    self.scrollView.delegate = self;
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * VIEWS, self.scrollView.frame.size.height);
     self.scrollView.contentOffset = CGPointMake(self.scrollView.frame.size.width * befor, 0);
     self.scrollView.pagingEnabled = YES;
@@ -165,7 +170,7 @@
             jsonErr = [NSString stringWithFormat:@"'%@'", [error localizedDescription]];
             jsonString = @"{}";
         }
-        //[NSThread sleepForTimeInterval:1.0f];
+        //[NSThread sleepForTimeInterval:2.0f];
         dispatch_async( dispatch_get_main_queue(), ^{
             // Back on the IU thread
             NSString *jsonData = [NSString stringWithFormat:@"{ date:'%@', data: %@ }", apiDate, jsonString];

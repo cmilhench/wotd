@@ -2,10 +2,11 @@
   <head>
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
     <script src="handlebars-v1.1.2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="spinner.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="wotd.css" type="text/css" charset="utf-8">
   </head>
   <body>
-    <div id="content-placeholder">Loading...</div>
+    <div id="content-placeholder" class="fade"></div>
     <script id="wordOfTheDay-template" type="text/x-handlebars-template">
       <article>
         {{#if data.word}}
@@ -97,7 +98,7 @@
     </script>
     
     <script id="loading-template" type="text/x-handlebars-template">
-    Loading... 
+      <div id="spinner" style="width:100px;margin:110px auto;"></div>
     </script>
     
     <script type="text/javascript" charset="utf-8">
@@ -111,6 +112,14 @@
         var source   = document.querySelector("#loading-template").innerHTML;
         var template = Handlebars.compile(source);
         element.innerHTML = template(data || {});
+
+        var container  = element.querySelector("#spinner");
+        
+        var Spinner = require('spinner');
+        var spinner = new Spinner;
+        spinner.speed(30).size(100).text('');
+        container.appendChild(spinner.el);
+        element.classList.add('in');
       }
       
       function wordOfTheDay (err, data) {
@@ -118,8 +127,12 @@
         var element  = document.querySelector("#content-placeholder");
         var source   = document.querySelector("#wordOfTheDay-template").innerHTML;
         var template = Handlebars.compile(source);
-        element.innerHTML = template(data || {});
-        fix();
+        element.classList.remove('in');
+        setTimeout(function () {
+          element.innerHTML = template(data || {});
+          element.classList.add('in');
+          fix();
+        }, 300);
       }
       
       function randomWords (err, data) {
@@ -127,16 +140,24 @@
         var element  = document.querySelector("#content-placeholder");
         var source   = document.querySelector("#randomWords-template").innerHTML;
         var template = Handlebars.compile(source);
-        element.innerHTML = template(data || {});
-        fix();
+        element.classList.remove('in');
+        setTimeout(function () {
+          element.innerHTML = template(data || {});
+          element.classList.add('in');
+          fix();
+        }, 300);
       }
       
       function error (data) {
         var element  = document.querySelector("#content-placeholder");
         var source   = document.querySelector("#error-template").innerHTML;
         var template = Handlebars.compile(source);
-        element.innerHTML = template(data || {});
-        fix();
+        element.classList.remove('in');
+        setTimeout(function () {
+          element.innerHTML = template(data || {});
+          element.classList.add('in');
+          fix();
+        }, 300);
       }
       
       function fix() {
@@ -182,8 +203,13 @@
           "id": 711
         }
       };
-      //loading();
-      //wordOfTheDay(data);
+      function design(){
+        loading();
+        setTimeout(function(){
+          wordOfTheDay(null, { date: '', data: data });
+        }, 2000);
+      }
+      //design();
     </script>
   </body>
 </html>

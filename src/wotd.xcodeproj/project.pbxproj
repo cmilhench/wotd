@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3AD715185771600000238D /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AD70E185771600000238D /* icon-72.png */; };
+		3B3AD716185771600000238D /* icon-small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AD70F185771600000238D /* icon-small-50.png */; };
+		3B3AD717185771600000238D /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AD710185771600000238D /* icon-small.png */; };
+		3B3AD718185771600000238D /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AD711185771600000238D /* icon-small@2x.png */; };
+		3B3AD719185771600000238D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AD712185771600000238D /* icon.png */; };
+		3B3AD71A185771600000238D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AD713185771600000238D /* icon@2x.png */; };
+		3B3AD71B185771600000238D /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AD714185771600000238D /* iTunesArtwork@2x.png */; };
 		3B4BA6DE184F64B0009E2A58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BA6DD184F64B0009E2A58 /* Foundation.framework */; };
 		3B4BA6E0184F64B0009E2A58 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BA6DF184F64B0009E2A58 /* CoreGraphics.framework */; };
 		3B4BA6E2184F64B0009E2A58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BA6E1184F64B0009E2A58 /* UIKit.framework */; };
@@ -23,9 +30,18 @@
 		3B4BA720184F96D8009E2A58 /* wotd.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BA71F184F96D8009E2A58 /* wotd.css */; };
 		3B4BA723184F9F18009E2A58 /* wordnik.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BA722184F9F18009E2A58 /* wordnik.png */; };
 		3B4BA72518507AFD009E2A58 /* link.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BA72418507AFD009E2A58 /* link.png */; };
+		3B4BA72D185624D4009E2A58 /* spinner.js in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BA72C185624D4009E2A58 /* spinner.js */; };
+		3B4BA72E185625C0009E2A58 /* spinner.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BA72C185624D4009E2A58 /* spinner.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B3AD70E185771600000238D /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		3B3AD70F185771600000238D /* icon-small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small-50.png"; sourceTree = "<group>"; };
+		3B3AD710185771600000238D /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
+		3B3AD711185771600000238D /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
+		3B3AD712185771600000238D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		3B3AD713185771600000238D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		3B3AD714185771600000238D /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		3B4BA6DA184F64B0009E2A58 /* wotd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wotd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4BA6DD184F64B0009E2A58 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B4BA6DF184F64B0009E2A58 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -49,6 +65,7 @@
 		3B4BA722184F9F18009E2A58 /* wordnik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wordnik.png; sourceTree = "<group>"; };
 		3B4BA72418507AFD009E2A58 /* link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = link.png; sourceTree = "<group>"; };
 		3B4BA72B18521E28009E2A58 /* COLApiKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COLApiKey.h; sourceTree = "<group>"; };
+		3B4BA72C185624D4009E2A58 /* spinner.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = spinner.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +149,14 @@
 		3B4BA721184F9F08009E2A58 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3B3AD70E185771600000238D /* icon-72.png */,
+				3B3AD70F185771600000238D /* icon-small-50.png */,
+				3B3AD710185771600000238D /* icon-small.png */,
+				3B3AD711185771600000238D /* icon-small@2x.png */,
+				3B3AD712185771600000238D /* icon.png */,
+				3B3AD713185771600000238D /* icon@2x.png */,
+				3B3AD714185771600000238D /* iTunesArtwork@2x.png */,
+				3B4BA72C185624D4009E2A58 /* spinner.js */,
 				3B4BA717184F8329009E2A58 /* handlebars-v1.1.2.js */,
 				3B4BA71F184F96D8009E2A58 /* wotd.css */,
 				3B4BA712184F7025009E2A58 /* wotd.html */,
@@ -235,14 +260,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4BA72E185625C0009E2A58 /* spinner.js in Resources */,
 				3B4BA71E184F8EEF009E2A58 /* handlebars-v1.1.2.js in Resources */,
+				3B3AD716185771600000238D /* icon-small-50.png in Resources */,
+				3B3AD71B185771600000238D /* iTunesArtwork@2x.png in Resources */,
 				3B4BA72518507AFD009E2A58 /* link.png in Resources */,
+				3B3AD717185771600000238D /* icon-small.png in Resources */,
 				3B4BA6F6184F64B0009E2A58 /* Images.xcassets in Resources */,
 				3B4BA6E8184F64B0009E2A58 /* InfoPlist.strings in Resources */,
+				3B3AD715185771600000238D /* icon-72.png in Resources */,
+				3B3AD719185771600000238D /* icon.png in Resources */,
 				3B4BA720184F96D8009E2A58 /* wotd.css in Resources */,
+				3B3AD718185771600000238D /* icon-small@2x.png in Resources */,
 				3B4BA723184F9F18009E2A58 /* wordnik.png in Resources */,
 				3B4BA713184F7025009E2A58 /* wotd.html in Resources */,
 				3B4BA6F1184F64B0009E2A58 /* Main.storyboard in Resources */,
+				3B3AD71A185771600000238D /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4BA72D185624D4009E2A58 /* spinner.js in Sources */,
 				3B4BA6EA184F64B0009E2A58 /* main.m in Sources */,
 				3B4BA6EE184F64B0009E2A58 /* COLAppDelegate.m in Sources */,
 				3B4BA71D184F8AFC009E2A58 /* COLLocalJSURLProtocol.m in Sources */,
@@ -358,7 +392,6 @@
 		3B4BA70D184F64B0009E2A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wotd/wotd-Prefix.pch";
@@ -372,7 +405,6 @@
 		3B4BA70E184F64B0009E2A58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wotd/wotd-Prefix.pch";

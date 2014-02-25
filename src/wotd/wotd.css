@@ -61,3 +61,12 @@ footer small {
   line-height:6px;
   margin-top:2px;
 }
+
+.fade {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.fade.in,
+.fade:hover {
+  opacity: 1;
+}
